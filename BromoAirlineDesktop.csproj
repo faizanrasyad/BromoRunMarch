@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{96ADB026-DBF5-42A9-BA4A-FED5D483AE91}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BromoAirlineDesktop</RootNamespace>
+    <AssemblyName>BromoAirlineDesktop</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.102.2.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>packages\ClosedXML.0.102.2\lib\netstandard2.0\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.16.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>packages\DocumentFormat.OpenXml.2.16.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="Irony, Version=1.0.11.0, Culture=neutral, PublicKeyToken=ca48ace7223ead47, processorArchitecture=MSIL">
+      <HintPath>packages\Irony.NetCore.1.0.11\lib\net461\Irony.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Packaging.6.0.0\lib\net461\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.RegularExpressions.4.3.1\lib\net463\System.Text.RegularExpressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="XLParser, Version=1.5.2.0, Culture=neutral, PublicKeyToken=63397e1e46bb91b4, processorArchitecture=MSIL">
+      <HintPath>packages\XLParser.1.5.2\lib\net461\XLParser.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BeliTiketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BeliTiketForm.Designer.cs">
+      <DependentUpon>BeliTiketForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BromoAirlineDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BromoAirlineDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD\BandaraCRUD.cs" />
+    <Compile Include="CRUD\CustomerCRUD.cs" />
+    <Compile Include="CRUD\DaftarAkun.cs" />
+    <Compile Include="CRUD\JadwalPenerbanganCRUD.cs" />
+    <Compile Include="CRUD\MaskapaiCRUD.cs" />
+    <Compile Include="CRUD\PromoCRUD.cs" />
+    <Compile Include="CRUD\StatusPenerbanganCRUD.cs" />
+    <Compile Include="Data\Repo.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fragments\BandaraFrag.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Fragments\BandaraFrag.Designer.cs">
+      <DependentUpon>BandaraFrag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fragments\JadwalPenerbanganFrag.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Fragments\JadwalPenerbanganFrag.Designer.cs">
+      <DependentUpon>JadwalPenerbanganFrag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fragments\MaskapaiFrag.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Fragments\MaskapaiFrag.Designer.cs">
+      <DependentUpon>MaskapaiFrag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fragments\PromoFrag.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Fragments\PromoFrag.Designer.cs">
+      <DependentUpon>PromoFrag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fragments\StatusPenerbanganFrag.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Fragments\StatusPenerbanganFrag.Designer.cs">
+      <DependentUpon>StatusPenerbanganFrag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFormCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormCustomer.Designer.cs">
+      <DependentUpon>MainFormCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Akun.cs">
+      <DependentUpon>BromoAirline.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Bandara.cs">
+      <DependentUpon>BromoAirline.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BromoAirline.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BromoAirline.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BromoAirline.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BromoAirline.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BromoAirline.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BromoAirline.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\JadwalPenerbangan.cs">
+      <DependentUpon>BromoAirline.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\KodePromo.cs">
+      <DependentUpon>BromoAirline.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Maskapai.cs">
+      <DependentUpon>BromoAirline.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Negara.cs">
+      <DependentUpon>BromoAirline.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PerubahanStatusJadwalPenerbangan.cs">
+      <DependentUpon>BromoAirline.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\StatusPenerbangan.cs">
+      <DependentUpon>BromoAirline.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TransaksiDetail.cs">
+      <DependentUpon>BromoAirline.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TransaksiHeader.cs">
+      <DependentUpon>BromoAirline.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PenerbanganForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PenerbanganForm.Designer.cs">
+      <DependentUpon>PenerbanganForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TiketSayaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TiketSayaForm.Designer.cs">
+      <DependentUpon>TiketSayaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Enkripsi.cs" />
+    <Compile Include="Utils\Export.cs" />
+    <Compile Include="Utils\GeneratorID.cs" />
+    <Compile Include="Utils\Konfirmasi.cs" />
+    <EmbeddedResource Include="BeliTiketForm.resx">
+      <DependentUpon>BeliTiketForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fragments\BandaraFrag.resx">
+      <DependentUpon>BandaraFrag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fragments\JadwalPenerbanganFrag.resx">
+      <DependentUpon>JadwalPenerbanganFrag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fragments\MaskapaiFrag.resx">
+      <DependentUpon>MaskapaiFrag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fragments\PromoFrag.resx">
+      <DependentUpon>PromoFrag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fragments\StatusPenerbanganFrag.resx">
+      <DependentUpon>StatusPenerbanganFrag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFormCustomer.resx">
+      <DependentUpon>MainFormCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PenerbanganForm.resx">
+      <DependentUpon>PenerbanganForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TiketSayaForm.resx">
+      <DependentUpon>TiketSayaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model\BromoAirline.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BromoAirline.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BromoAirlineDataSet.xsc">
+      <DependentUpon>BromoAirlineDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BromoAirlineDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BromoAirlineDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BromoAirlineDataSet.xss">
+      <DependentUpon>BromoAirlineDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Model\BromoAirline.edmx.diagram">
+      <DependentUpon>BromoAirline.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Model\BromoAirline.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BromoAirline.edmx</DependentUpon>
+      <LastGenOutput>BromoAirline.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\BromoAirline.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BromoAirline.edmx</DependentUpon>
+      <LastGenOutput>BromoAirline.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\group-regular-72.png" />
+    <None Include="Resources\time-five-regular-721.png" />
+    <None Include="Resources\right-arrow-regular-72.png" />
+    <None Include="Resources\circle-solid-72.png" />
+    <None Include="Resources\mountain.png" />
+    <None Include="Resources\group-solid-72.png" />
+    <None Include="Resources\chevron-left-solid-72.png" />
+    <None Include="Resources\time-five-regular-72.png" />
+    <None Include="Resources\calendar-selected-722.png" />
+    <None Include="Resources\plane-land-solid-72.png" />
+    <None Include="Resources\plane-take-off-solid-72.png" />
+    <None Include="Resources\airplane-ticket.png" />
+    <None Include="Resources\log-out-alt-72.png" />
+    <None Include="Resources\Logo Small Alt - Without Padding.png" />
+    <None Include="Resources\calendar-selected-721.png" />
+    <None Include="Resources\plane-take-off-selected-72.png" />
+    <None Include="Resources\purchase-tag-alt-selected-72.png" />
+    <None Include="Resources\notepad-selected-72.png" />
+    <None Include="Resources\map-selected-72.png" />
+    <None Include="Resources\log-out-unselected-72.png" />
+    <None Include="Resources\calendar-selected-72.png" />
+    <None Include="Resources\notepad-unselected-72.png" />
+    <None Include="Resources\purchase-tag-alt-unselected-72.png" />
+    <None Include="Resources\calendar-unselected-72.png" />
+    <None Include="Resources\plane-take-off-unselected-72.png" />
+    <None Include="Resources\map-unselected-72.png" />
+    <None Include="Resources\menu-alt-72.png" />
+    <None Include="Resources\Logo Rect - Without Tagline - Without Padding.png" />
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
